@@ -14,9 +14,9 @@
     <input type="checkbox" id="nav-toggle" class="nav-toggle">
     <nav>
       <ul>
-        <li><a href="#">About me</a></li>
-        <li><a href="#">Skills</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#about-me">About me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
     <label for="nav-toggle" class="nav-toggle-label">
@@ -25,7 +25,85 @@
   </header>
   <div class="content">
     <h2>Kajetan Światły<br><br>Full-stack Developer</h2>
-
   </div>
+  <div class="contact-invitation">
+    <h3>Let me know how can I help you with your projects!</h3>
+    <a href="#contact" class="contact">Contact me!</a>
+    <a href="#CV">Check my CV</a>      
+  </div>
+  <div id="middle">
+    <div class="mid-content">
+      <div id="about-me">
+        <h2>About me</h2>
+        <div class="info">
+          <div class="inner">
+            <div class ="personal-list">
+              <h4>Full name: <span class="name">Kajetan Światły</span></h4>
+              <h4>Age: <span class="name">21 Years</span></h4>
+              <h4>Job: <span class="name">Web Developer</span></h4>
+              <h4>Telephone: <span class="name">666-666-666</span></h4>
+              <h4>E-mail: <span class="name">kajetan.swiatly@gmail.com</span></h4>
+            </div>
+            <div class="personal-text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquam mattis est eget pellentesque. Nullam in neque
+              felis. Nulla tempor ante ac leo dictum, eget rhoncus odio efficitur. Nunc leo ipsum, sagittis in purus ac, varius
+              tristique orci. Curabitur eget sem non lorem cursus mollis. Orci varius natoque penatibus et magnis dis parturient
+              montes, nascetur ridiculus mus.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="skills"></div>
+    </div>
+  </div>
+  <div id="middle">
+    <div class="mid-content">
+      <div id="skills">
+        <h2>Skills</h2>
+        <div class="skills-info">
+          <div class="skills-inner">
+            <div class ="skills-list">
+              <h4><span class="skills-type">Front End</span></h4>
+              <h4><span class="skills-name">Html, CSS, Javascript</span></h4>
+            </div>
+            <div class="skills-text">
+              <h4><span class="skills-type">Back End</span></h4>
+              <h4><span class="skills-name">C#, MySQL</span></h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   <footer>
+      <div id="contact">
+        <div class="contact-left">
+          <div class="contact-left-content">
+            <span class="text">Have you got a question? I'm here to help you! Send me a message and I will answer you as soon as possible!</span>
+            <div class="text address">
+              <strong>Poland, Wrocław</strong>
+              Grunwaldzka 23/3 50-356 <br>
+              666-666-666<br>
+              kajetan.swiatly@gmail.com<br><br>
+              <div>
+                <a href="#"><i class="icon icon-linkedin-circled"></i></a>
+                <a href="#"><i class="icon icon-github-circled"></i></a>
+                <a href="#"><i class="icon icon-facebook-circled"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-right">
+          <div class="contact-right-content">
+            <h1>Leave your message</h1>
+            <div><input type="text" placeholder="Name"></div>
+            <div><input type="text" placeholder="Your e-mail address"></div>
+            <div><input type="text" placeholder="Topic"></div>
+            <div><input class="last" type="text" placeholder="Message:"></div>
+          </div>
+        </div>
+      </div>
+      <h5>Prawa autorskie &copy; 2019 Kajetan Światły</h5>
+    </footer>
 </body>
 </html>
