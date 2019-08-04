@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>My Website | Kajetan Światły</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="font/fontello.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-  <title>My Website | Kajetan Światły</title>
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+  <script src="main.js"></script> 
 </head>
 <body>
   <header>
     <img class="comp" src="img/computer.png" alt="Computer" height="60" width="60"><h1 class="logo">KŚ</h1>
     <input type="checkbox" id="nav-toggle" class="nav-toggle">
-    <nav>
+    <a href="#" class="scrollup"></a>
+    <nav class="navbar">
       <ul>
         <li><a href="#about-me">About me</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -84,12 +88,7 @@
               <strong>Poland, Wrocław</strong>
               Grunwaldzka 23/3 50-356 <br>
               666-666-666<br>
-              kajetan.swiatly@gmail.com<br><br>
-              <div>
-                <a href="#"><i class="icon icon-linkedin-circled"></i></a>
-                <a href="#"><i class="icon icon-github-circled"></i></a>
-                <a href="#"><i class="icon icon-facebook-circled"></i></a>
-              </div>
+              kajetan.swiatly@gmail.com
             </div>
           </div>
         </div>
@@ -99,7 +98,9 @@
             <div><input type="text" placeholder="Name"></div>
             <div><input type="text" placeholder="Your e-mail address"></div>
             <div><input type="text" placeholder="Topic"></div>
-            <div><input class="last" type="text" placeholder="Message:"></div>
+            <label>Message:</label>
+            <textarea class="message" rows="3" ></textarea>
+            <button type="submit" class="btn" style="visibility: visible; animation-name: fadeInRight;">Send message</button>
           </div>
         </div>
       </div>
