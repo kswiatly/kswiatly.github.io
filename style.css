@@ -496,6 +496,9 @@ input.last {
 .contact-right-content h1 {
   font-size: 1.4em;
 }
+.contact-right-content input{
+  font-size: 100%;
+}
 .btn{
   margin-left: 8em;
 }
