@@ -69,90 +69,13 @@ nav a:hover {
   color: var( --main-color);
 }
 
-.nav-toggle:checked ~ nav {
-  transform: scale(1,1);
-}
-
-.nav-toggle:checked ~ nav a {
-  opacity: 1;
-  transition: opacity 250ms ease-in-out 250ms;
-}
-
-@media screen and (min-width: 800px) {
-  .nav-toggle-label {
-    display: none;
-  }
-
-  header {
-    display: grid;
-    grid-template-columns: auto minmax(800px, 3fr) 3fr;
-  }
-  
-  .logo {
-   color: white;
-   margin-left: 115px;
-  }
-
-  
- .comp{
-    position: absolute;
-    margin-left: 50px;
-    margin-top:  20px;
-   }
-
-  nav {  
-    position: relative;
-    text-align: left;
-    transition: none;
-    transform: scale(1,1);
-    background: none;
-    top: initial;
-    left: initial;
-    grid-column: 3 / 4 ;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  
-  nav ul {
-    display: flex;
-    padding-right:  10%;
-  }
-  
-  nav li {
-    margin-left: 2em;
-    margin-bottom: 0;
-  }
-  
-  nav a {
-    opacity: 1;
-    position: relative;
-  }
-  
-  nav a::before {
-    content: '';
-    display: block;
-    height: 5px;
-    background: var(--main-color);
-    position: absolute;
-    top: -.75em;
-    left: 0;
-    right: 0;
-    transform: scale(0, 1);
-    transition: transform ease-in-out 250ms;
-  }
-  
-nav a:hover::before {
-    transform: scale(1,1);
-  }
-}
-
 h2{
   color: white;
   font-size: 64px;
   font-family: 'Asap', sans-serif;
   font-weight: 400;
   text-align: center;
+  animation:  drop 1.5s ease;
 }
 
 .contact-invitation {
@@ -257,16 +180,6 @@ h2{
   flex: 6;
   color: white;
 }
-@media only screen and (max-width: 1000px) {
-  .info .inner {
-    flex-direction: column;
-    align-items: center;
-  }
-  .personal-text {
-    border: none;
-    border-top: 1px solid white;
-  }
-}
 
 #skills {
   display: flex;
@@ -322,17 +235,6 @@ h2{
 }
 .skills-name{
   color:white;
-}
-
-@media only screen and (max-width: 1000px) {
-  .skills-info .skills-inner {
-    flex-direction: column;
-    align-items: center;
-  }
-  .skills-text {
-    border: none;
-    border-top: 1px solid white;
-  }
 }
 
 footer {
@@ -394,8 +296,8 @@ footer {
 }
 
 .contact-left-content a{
-  margin-right: 4%;
-  font-size: 1.5em;
+  margin-right: 0%;
+  font-size: 1.3em;
 }
 
 .contact-left-content a i{
@@ -487,10 +389,290 @@ input.last {
   height: 280%;
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (min-width: 1456px) {
+  nav{
+  position: relative;
+  text-align: left;
+  transition: none;
+  transform: scale(1,1);
+  background: none;
+  top: initial;
+  left: initial;
+  grid-column: 3/4;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+}
 
+@media only screen and (max-width: 1456px) {
+  nav{
+  position: relative;
+  text-align: left;
+  transition: none;
+  transform: scale(1,1);
+  background: none;
+  top: initial;
+  left: initial;
+  grid-column: 2/4;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#contact {
+  height: 36.5rem;
+  width: 75%;
+}
+.contact-left-content a {
+  margin-right: 0.5%;
+  font-size: 1.2em;
+}
+
+.contact-left-content .text {
+  font-size: 0.9em;
+}
+.contact-left-content .address {
+  font-size: 0.9em;
+}
+
+.btn {
+  margin-left: 15em;
+  margin-top: 1.8em;
+  width: 40%;
+  font-size: 1rem;
+  line-height: 2;
+}
+}
+@media only screen and (max-width: 1000px) {
+  
+  .content h2{
+    font-size: 2.5em;
+  }
+
+  .navbar ul{
+    grid-column: auto;
+    right: 10em;
+    
+  }
+  .contact-invitation h3{
+    font-size: 1.4em;
+  }
+
+  .contact-invitation a{
+    font-size: 95%;
+  }
+
+  #about-me h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+  .personal-list {
+  font-size: 0.7em;
+}
+
+.personal-text {
+  font-size: 0.8em;
+  line-height: 1.75; 
+}
+
+.skills-list {
+  font-size: 1em;
+  line-height: 0.5;
+  
+} 
+
+.skills-text {
+  font-size: 1em;
+  line-height: 0.5;
+}
+
+#skills h2 {
+  flex-direction: row;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.contact-right-content h1 {
+  font-size: 1.4em;
+}
+.btn{
+  margin-left: 8em;
+}
+}
+
+@media screen and (max-width: 800px) {
+
+  .logo{
+    position: absolute;
+    color:white;
+    left: 86px;
+   }
+  .comp{
+    position: absolute;
+    left: 30px;
+    top:  20px;
+   }
+  
+  nav ul {
+    display: flex;
+    padding-top: 5%;
+    padding-right:  4%;
+  }
+  
+  nav li {
+    margin-left: 2em;
+    margin-bottom: 0;
+  }
+  
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+  
+  nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: var(--main-color);
+    position: absolute;
+    top: -.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+  
+nav a:hover::before {
+    transform: scale(1,1);
+  }
+}  
+
+.contact-left {
+  flex:2;
+}
+
+
+@media screen and (min-width: 800px) {
+  
+  header {
+    display: grid;
+    grid-template-columns: auto minmax(360px, 3fr) 3fr;
+  }
+  
+  .logo {
+   color: white;
+   margin-left: 115px;
+  }
+
+  
+ .comp{
+    position: absolute;
+    margin-left: 50px;
+    margin-top:  20px;
+   }
+  
+  nav ul {
+    display: flex;
+    padding-right:  10%;
+  }
+  
+  nav li {
+    margin-left: 2em;
+    margin-bottom: 0;
+  }
+  
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+  
+  nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: var(--main-color);
+    position: absolute;
+    top: -.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+  
+nav a:hover::before {
+    transform: scale(1,1);
+  }
+}  
+
+@media only screen and (max-width: 360px) {
+
+  header {
+    display: grid;
+    grid-template-columns: auto minmax(360px, 3fr) 3fr;
+  }
+  
+  .logo {
+   color: white;
+   left: 10px;
+   margin-top: 46px;
+  }
+  
+ .comp{
+   margin-top: 20px;
+   }
+  
+  nav{
+    top:10px;
+    right:10px;
+  }
+  nav ul {
+    display: flex;
+    padding-right: 0;
+    font-size: 5px;
+ }
+  
+  nav li {
+    padding-right: 1%;
+  }
+  
   #contact {
     flex-direction: column-reverse;
+  }
+  .content h2{
+    font-size: 32px;
+  }
+  .comp{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 1.2em;
+    top: 1.6em;
+  }
+
+  .logo{
+    font-size: 37px;
+    left: 2em;
+    top: 0.3em;
+  }
+
+  .info .inner {
+    padding: 1em 1em;
+    flex-direction: column;
+}
+
+.personal-list {
+  font-size: 0.9em;
+}
+.personal-text {
+  border-top: 1px solid white;
+  border-left: 0;
+  width: 95%;
+  font-size: 0.8em;
+  padding-left: 0px;
+}
+  h2{
+    font-size: 37px;
   }
   .contact-left-content .address {
     margin-top: 3em;
@@ -502,7 +684,210 @@ input.last {
   input.last {
     margin-bottom: 2em;
   }
+
+  #about-me .info {
+    margin-bottom: 50px;
+}
+  #contact {
+    height: 36.5rem;
+    width: 75%;
+}
+#skills .skills-info {
+  margin-top: 0px;
+  margin-bottom: 100px;
+}
+.skills-info .skills-inner {
+  padding: 1em 1em;
+}
+.skills-list {
+  padding-top: 10px;
+  font-size: 0.8em;
+  line-height: 1em;
+}
+.skills-text {
+  font-size: 0.8em;
+  line-height: 2em;
 }
 
+.contact-right-content {
+  flex-direction: column;
+}
 
+.contact-left {
+  position: absolute;
+  top: 2300px;
+  height: 64%;
+  width:  80%;
+  z-index: 1;
+}
+.contact-right-content h1{
+  font-size: 1.4em;
+  margin-bottom: 0px;
+  margin-top: 2.3em;
+}
+.contact-right {
+  position: absolute;
+  top: 2630px;
+  height: 100%;
+  width:  80%;
+  z-index: 0;
+}
+body{
+  background: var(--background);
+}
+
+.btn{
+  margin-left: 3.5em;
+  margin-top: 1em;
+  width: 8em;
+}
+}
+
+@media only screen and (max-width: 670px) {
+
+  header {
+    display: grid;
+    grid-template-columns: auto minmax(360px, 3fr) 3fr;
+  }
+  
+  .logo {
+   color: white;
+   left: 10px;
+   margin-top: 46px;
+  }
+  
+ .comp{
+   margin-top: 20px;
+   }
+  
+  nav{
+    top:10px;
+    right:10px;
+  }
+  nav ul {
+    display: flex;
+    padding-right: 0;
+    font-size: 5px;
+ }
+  
+  nav li {
+    padding-right: 1%;
+  }
+  
+  #contact {
+    flex-direction: column-reverse;
+  }
+  .content h2{
+    font-size: 32px;
+  }
+  .comp{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 1.2em;
+    top: 1.6em;
+  }
+
+  .logo{
+    font-size: 37px;
+    left: 2em;
+    top: 0.3em;
+  }
+
+  .info .inner {
+    padding: 1em 1em;
+    flex-direction: column;
+}
+
+.personal-list {
+  font-size: 0.9em;
+}
+.personal-text {
+  border-top: 1px solid white;
+  border-left: 0;
+  width: 95%;
+  font-size: 0.8em;
+  padding-left: 0px;
+}
+  h2{
+    font-size: 37px;
+  }
+  .contact-left-content .address {
+    margin-top: 3em;
+    margin-bottom: 2em;
+  }
+  .contact-right-content h1 {
+    margin-top: 2em;
+  }
+  input.last {
+    margin-bottom: 2em;
+  }
+
+  #about-me .info {
+    margin-bottom: 50px;
+}
+  #contact {
+    height: 36.5rem;
+    width: 75%;
+}
+#skills .skills-info {
+  margin-top: 0px;
+  margin-bottom: 100px;
+}
+.skills-info .skills-inner {
+  padding: 1em 1em;
+}
+.skills-list {
+  padding-top: 10px;
+  font-size: 0.8em;
+  line-height: 1em;
+}
+.skills-text {
+  font-size: 0.8em;
+  line-height: 2em;
+}
+
+.contact-right-content {
+  flex-direction: column;
+}
+
+.contact-left {
+  position: absolute;
+  top: 2300px;
+  height: 74%;
+  width:  80%;
+  z-index: 1;
+}
+.contact-right-content h1{
+  font-size: 1.4em;
+  margin-bottom: 0px;
+  margin-top: 2.3em;
+}
+.contact-right {
+  position: absolute;
+  top: 2600px;
+  height: 100%;
+  width:  80%;
+  z-index: 0;
+}
+body{
+  background: var(--background);
+}
+
+.btn{
+  margin-left: 4em;
+  margin-top: 1em;
+  width: 8em;
+}
+}
+@keyframes drop{
+ 0%{
+   opacity: 0;
+   transform: translateY(-80px);
+ }
+ 100%{
+  opacity: 1;
+  transform: translateY(0px);
+ }
+}
 
